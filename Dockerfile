@@ -4,11 +4,11 @@ FROM dskim89/tensorflow-genomics:latest
 
 # generic
 RUN apt-get update -y
-RUN apt-get install -y emacs libcurl4-openssl-dev python-tk
+RUN apt-get install -y emacs python-tk
 
 # install R (v 3.2.3)
 # NOTE: to keep compatible in the future may need to install from source
-RUN apt-get install -y libopenblas-base r-base=3.2.3-4
+RUN apt-get install -y libopenblas-base r-base=3.2.3-4 libcurl4-openssl-dev
 RUN mkdir -p /R
 
 # install CRAN packages
