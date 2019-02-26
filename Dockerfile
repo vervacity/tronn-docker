@@ -3,7 +3,7 @@ FROM dskim89/tensorflow-genomics:latest
 # tronn specific installations (mostly R)
 
 # generic
-RUN apt-get update -y
+RUN apt-get update -y --fix-missing
 RUN apt-get install -y emacs
 
 # install R (v 3.2.3)
