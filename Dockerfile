@@ -4,7 +4,7 @@ FROM dskim89/tensorflow-genomics:latest
 
 # generic
 RUN apt-get update -y --fix-missing
-RUN apt-get install -y emacs
+RUN apt-get install -y emacs python-tk
 
 # install R (v 3.2.3)
 # NOTE: to keep compatible in the future may need to install from source
