@@ -18,3 +18,10 @@ RUN Rscript /R/install_cran.R
 # install bioconductor packages
 ADD install_bioc.R /R/
 RUN Rscript /R/install_bioc.R
+
+# install seqtk
+RUN cd /software/ && \
+  git clone https://github.com/lh3/seqtk.git && \
+  cd seqtk && \
+  make && \
+  cd
