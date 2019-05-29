@@ -24,4 +24,8 @@ RUN cd /software/ && \
   git clone https://github.com/lh3/seqtk.git && \
   cd seqtk && \
   make && \
+  echo 'export PATH=/software/seqtk:$PATH' >> ~/.bash_profile && \
   cd
+
+# source the file to add software to PATH
+RUN sed -i '1s:^:. ~/.bash_profile\n:' ~/.bashrc
